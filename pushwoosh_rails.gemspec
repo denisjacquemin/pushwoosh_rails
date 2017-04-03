@@ -10,9 +10,16 @@ Gem::Specification.new do |s|
   s.authors     = ["Denis Jacquemin"]
   s.email       = ["denis.jacquemin@gmail.com"]
   s.homepage    = "TODO"
-  s.summary     = "Pushwoosh wrapper for Rails."
-  s.description = "PushwooshRails is a Pushwoosh wrapper for Ruby on Rails"
+  s.summary     = "Gem to wrap Pushwoosh API."
+  s.description = "Gem to wrap Pushwoosh API."
   s.license     = "MIT"
+
+  s.add_development_dependency "minitest"
+  s.add_development_dependency "vcr"
+  s.add_development_dependency "webmock"
+
+  s.add_dependency "faraday"
+  s.add_dependency "json"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 

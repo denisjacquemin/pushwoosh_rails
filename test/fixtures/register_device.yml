@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://cp.pushwoosh.com/json/1.3/register
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+                  "request": {
+                      "application": "APPLICATION_CODE",
+                      "push_token": "DEVICE_PUSH_TOKEN",
+                      "language": "en",
+                      "hwid": "hardware device id",
+                      "timezone": 3600,
+                      "device_type": 1
+                  }
+              }
+    headers:
+      User-Agent:
+      - Faraday v0.12.0.1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 03 Apr 2017 19:32:00 GMT
+      Content-Type:
+      - application/json; charset=utf8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - phpDaemon/1.0-beta3
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, OPTIONS
+      X-Pw-Cluster-Node:
+      - api-01
+      X-Pw-Front-Node:
+      - front-07
+    body:
+      encoding: UTF-8
+      string: '{"status_code":210,"status_message":"Application not found","response":null}'
+    http_version: 
+  recorded_at: Mon, 03 Apr 2017 19:32:00 GMT
+recorded_with: VCR 3.0.3
